@@ -33,20 +33,23 @@ public class AssessmentTests {
     @Test (priority = 0, testName = "Assessment Test")
     public void testAssessment() {
 
+        // Read in the JSON body
+        Response response = myAPI.getJSONResponse(GlobalVariables.url);
+
         // Read in the name from the JSON response
-        String actualName = myAPI.getStringFieldValue("Name");
+        String actualName = myAPI.getStringFieldValue("Name", response);
 
         // Compare the name received to the name expected
         myValidate.assertStringsMatch("Carbon credits", actualName);
 
         // Read in the name from the JSON response
-        boolean actualResponse = myAPI.getBooleanValue("CanRelist");
+        boolean actualResponse = myAPI.getBooleanValue("CanRelist", response);
 
         // Compare the name received to the name expected
         myValidate.assertBooleanType(true, actualResponse);
 
         // Read in the name from the JSON response
-        String description = myAPI.getDescriptionByName("Gallery");
+        String description = myAPI.getDescriptionByName("Gallery", response);
 
         // Compare the name received to the name expected
         myValidate.assertFieldValueContainsSubString(description, "2x larger image");
