@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Test Suite: Assessment Tests" duration-ms="10497" started-at="2018-10-03T09:47:31Z" finished-at="2018-10-03T09:47:41Z">
+    <groups>
+    </groups>
+    <test name="Test 1" duration-ms="10497" started-at="2018-10-03T09:47:31Z" finished-at="2018-10-03T09:47:41Z">
+      <class name="AssessmentTests">
+        <test-method status="PASS" signature="getMethodName(java.lang.reflect.Method)[pri:0, instance:AssessmentTests@6442b0a6]" name="getMethodName" is-config="true" duration-ms="8" started-at="2018-10-03T11:47:31Z" finished-at="2018-10-03T11:47:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void AssessmentTests.testAssessment()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getMethodName -->
+        <test-method status="PASS" signature="testAssessment()[pri:0, instance:AssessmentTests@6442b0a6]" name="testAssessment" duration-ms="10449" started-at="2018-10-03T11:47:31Z" finished-at="2018-10-03T11:47:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAssessment -->
+      </class> <!-- AssessmentTests -->
+    </test> <!-- Test 1 -->
+  </suite> <!-- Test Suite: Assessment Tests -->
+</testng-results>
