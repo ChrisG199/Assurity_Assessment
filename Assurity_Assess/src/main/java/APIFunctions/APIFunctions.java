@@ -27,7 +27,7 @@ import static com.jayway.restassured.RestAssured.*;
 
 public class APIFunctions {
 
-    private Response getJSONResponse (String url) {
+    public Response getJSONResponse (String url) {
 
         // Return the JSON response
         return given().
@@ -39,26 +39,21 @@ public class APIFunctions {
                 response();
     }
 
-    public String getStringFieldValue(String field) {
-
-        Response response = getJSONResponse(GlobalVariables.url);
+    public String getStringFieldValue(String field, Response response) {
 
         // Return the string value of the field from the JSON response
         return response.body().path(field);
 
     }
 
-    public Boolean getBooleanValue(String fieldName) {
-
-        Response response = getJSONResponse(GlobalVariables.url);
+    public Boolean getBooleanValue(String fieldName, Response response) {
 
         // Return the boolean value of the field
         return response.body().path(fieldName);
     }
 
-    public String getDescriptionByName(String nameValue) {
+    public String getDescriptionByName(String nameValue, Response response) {
 
-        Response response = getJSONResponse(GlobalVariables.url);
         String description = "";
 
         // Read in the list of promotions
